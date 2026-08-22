@@ -47,20 +47,20 @@ public class Alumno {
         int cantidadCreditos = 0;
         int materiasObligatoriasAprobadas = 0;
         for (Materia materia : materias) {
-            cantidadCreditos = cantidadCreditos + materia.obtenerCreditos();
+            cantidadCreditos = cantidadCreditos + materia.getCreditos();
             if (carrera.esObligatoria(materia)) {
                 materiasObligatoriasAprobadas++;
             }
         }
-        if (cantidadCreditos >= carrera.obtenerCreditosMinimos()) {
-            if (materiasObligatoriasAprobadas == carrera.obtenerCantidadObligatorias()) {
+        if (cantidadCreditos >= carrera.getCreditosMinimos()) {
+            if (materiasObligatoriasAprobadas == carrera.getCantidadObligatorias()) {
                 return "Ya estas recibido!";
             }
         } else {
-            if (materiasObligatoriasAprobadas == carrera.obtenerCantidadObligatorias()) {
-                return String.format("Tienes %d creditos de %d minimos. No cuentas con materias obligatorias por cursar.", cantidadCreditos, carrera.obtenerCreditosMinimos());
+            if (materiasObligatoriasAprobadas == carrera.getCantidadObligatorias()) {
+                return String.format("Tienes %d creditos de %d minimos. No cuentas con materias obligatorias por cursar.", cantidadCreditos, carrera.getCreditosMinimos());
             }
         }
-        return String.format("Tienes %d creditos de %d minimos. Te faltan %d materias obligatorias para recibirte", cantidadCreditos, carrera.obtenerCreditosMinimos(), carrera.obtenerCantidadObligatorias() - materiasObligatoriasAprobadas);
+        return String.format("Tienes %d creditos de %d minimos. Te faltan %d materias obligatorias para recibirte", cantidadCreditos, carrera.getCreditosMinimos(), carrera.getCantidadObligatorias() - materiasObligatoriasAprobadas);
     }
 }

@@ -11,11 +11,11 @@ public class Materia {
         this.creditos = creditos;
     }
 
-    public int obtenerCreditos() {
+    public int getCreditos() {
         return creditos;
     }
 
-    public String obtenerNombre() {
+    public String getNombre() {
         return nombre;
     }
 }

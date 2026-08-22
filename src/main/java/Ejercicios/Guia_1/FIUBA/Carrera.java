@@ -16,12 +16,12 @@ public class Carrera {
 
     public Materia buscarMateria(String nombreMateria) {
         for (Materia materia : materiasObligatorias) {
-            if (materia.obtenerNombre().equals(nombreMateria)){
+            if (materia.getNombre().equals(nombreMateria)){
                 return materia;
             }
         }
         for (Materia materia : materiasOptativas) {
-            if (materia.obtenerNombre().equals(nombreMateria)) {
+            if (materia.getNombre().equals(nombreMateria)) {
                 return materia;
             }
         }
@@ -32,11 +32,11 @@ public class Carrera {
         return materiasObligatorias.contains(materia);
     }
 
-    public int obtenerCreditosMinimos() {
+    public int getCreditosMinimos() {
         return creditosMinimos;
     }
 
-    public int obtenerCantidadObligatorias() {
+    public int getCantidadObligatorias() {
         return materiasObligatorias.size();
     }
 
