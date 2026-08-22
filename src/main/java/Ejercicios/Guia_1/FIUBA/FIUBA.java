@@ -7,10 +7,12 @@ import java.util.Scanner;
 public class FIUBA {
     private Map<Integer, Alumno> alumnos;
     private final Map<String, Carrera> carreras;
+    private static Scanner scanner;
 
     public FIUBA() {
         this.alumnos = new HashMap<Integer, Alumno>();
         this.carreras = new HashMap<String, Carrera>();
+        scanner = new Scanner(System.in);
         ArrayList<Materia> obligatoriasInformatica = new ArrayList<>();
         obligatoriasInformatica.add(new Materia(7540, "Algoritmos y Programación", 8));
         obligatoriasInformatica.add(new Materia(6103, "Análisis Matemático II", 8));
@@ -33,7 +35,7 @@ public class FIUBA {
         carreras.put("Mecanica", mecanica);
     }
 
-    public String inscribirAlumno(Scanner scanner) {
+    public String inscribirAlumno() {
         System.out.println("Ingrese un nombre:");
         String nombre = scanner.nextLine();
         System.out.println("Ingrese un padron:");
@@ -45,7 +47,7 @@ public class FIUBA {
         return "El alumno fue inscrito correctamente.";
     }
 
-    public String inscribirAlumnoEnCarrera(Scanner scanner) {
+    public String inscribirAlumnoEnCarrera() {
         System.out.println("Ingrese un padron:");
         Integer padron = Integer.valueOf(scanner.nextLine());
         System.out.println("Ingrese una carrera:");
@@ -61,7 +63,7 @@ public class FIUBA {
         return "Alumno inscrito correctamente.";
     }
 
-    public String aprobarMateria(Scanner scanner) {
+    public String aprobarMateria() {
         System.out.println("Ingrese un padron:");
         Integer padron = Integer.valueOf(scanner.nextLine());
         System.out.println("Ingrese una carrera:");
@@ -83,7 +85,7 @@ public class FIUBA {
         return "Materia aprobada correctamente.";
     }
 
-    public String consultarEstadoAlumno(Scanner scanner) {
+    public String consultarEstadoAlumno() {
         System.out.println("Ingrese un padron:");
         Integer padron = Integer.valueOf(scanner.nextLine());
         System.out.println("Ingrese una carrera:");
@@ -101,7 +103,6 @@ public class FIUBA {
     }
     public static void main(String[] args) {
         FIUBA sistema = new FIUBA();
-        Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Ingrese una de las opciones:");
             System.out.println("1: Inscribir alumno en sistema");
@@ -112,16 +113,16 @@ public class FIUBA {
             String opcion = scanner.nextLine();
             switch (opcion){
                 case "1":
-                    System.out.println(sistema.inscribirAlumno(scanner));
+                    System.out.println(sistema.inscribirAlumno());
                     break;
                 case "2":
-                    System.out.println(sistema.inscribirAlumnoEnCarrera(scanner));
+                    System.out.println(sistema.inscribirAlumnoEnCarrera());
                     break;
                 case "3":
-                    System.out.println(sistema.aprobarMateria(scanner));
+                    System.out.println(sistema.aprobarMateria());
                     break;
                 case "4":
-                    System.out.println(sistema.consultarEstadoAlumno(scanner));
+                    System.out.println(sistema.consultarEstadoAlumno());
                     break;
                 case "5":
                     return;
