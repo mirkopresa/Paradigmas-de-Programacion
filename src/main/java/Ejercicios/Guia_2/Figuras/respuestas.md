@@ -1,5 +1,6 @@
-Sea el siguiente código:
+# Sea el siguiente código:
 
+```java
 public class Main {
     public static void main(String[] args) {
         List<Figura> figuras = new ArrayList<>();
@@ -17,12 +18,13 @@ public class Main {
         return total;
     }
 }
+```
 
-a) Pensar cuáles son las relaciones entre Figura, Circulo, Cuadrado y Rectangulo. ¿Figura debe ser una clase, una clase abstracta o una interfaz?
+# a) Pensar cuáles son las relaciones entre Figura, Circulo, Cuadrado y Rectangulo. ¿Figura debe ser una clase, una clase abstracta o una interfaz?
 Figura debe ser una interfaz, la relacion entre circulo, cuadrado y rectangulo es que son Figuras, a las cuales se le puede calcular el area,
 pero estas cuentan con diferentes atributos y por ende diferentes maneras de calcular el area
 
-b) ¿Dónde hay comportamiento polimórfico? ¿De qué tipo es?
+# b) ¿Dónde hay comportamiento polimórfico? ¿De qué tipo es?
 El comportamiento polimorfico se ve al notar que el rectangulo, el circulo y el cuadrado se pueden tratar todos como una Figura, es decir,
 su supertipo, siendo estas subtipos de esta clase (Figura)
 El tipo es: Polimorfismo por inclusion o de subtipos
