@@ -28,3 +28,8 @@ pero estas cuentan con diferentes atributos y por ende diferentes maneras de cal
 El comportamiento polimorfico se ve al notar que el rectangulo, el circulo y el cuadrado se pueden tratar todos como una Figura, es decir,
 su supertipo, siendo estas subtipos de esta clase (Figura)
 El tipo es: Polimorfismo por inclusion o de subtipos
+
+# c) Dibujar el diagrama de clases.
+![UML](https://prnt.sc/JLKsnbHdc7fz)
+
+# d) Implementar
