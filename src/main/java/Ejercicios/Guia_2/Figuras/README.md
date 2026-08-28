@@ -30,6 +30,6 @@ su supertipo, siendo estas subtipos de esta clase (Figura)
 El tipo es: Polimorfismo por inclusion o de subtipos
 
 # c) Dibujar el diagrama de clases.
-![UML](src/main/java/Ejercicios/Guia_2/Figuras/UML.png)
+![UML](UML.png)
 
 # d) Implementar
