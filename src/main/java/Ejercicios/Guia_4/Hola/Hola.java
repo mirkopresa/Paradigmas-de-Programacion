@@ -1,4 +1,4 @@
-package Ejercicios.Guia_4;
+package Ejercicios.Guia_4.Hola;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -18,7 +18,7 @@ public class Hola extends Application {
         var vbox = new VBox(label);
         var button = new Button("Saludar");
 
-        button.setOnAction(e -> new Alert(Alert.AlertType.INFORMATION,"Hola " + campo.getText() + "!").show());
+        button.setOnAction(_ -> new Alert(Alert.AlertType.INFORMATION,"Hola " + campo.getText() + "!").show());
 
         vbox.getChildren().add(campo);
         vbox.getChildren().add(button);

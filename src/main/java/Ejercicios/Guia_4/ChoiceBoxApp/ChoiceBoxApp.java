@@ -1,4 +1,4 @@
-package Ejercicios.Guia_4;
+package Ejercicios.Guia_4.ChoiceBoxApp;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -15,7 +15,7 @@ public class ChoiceBoxApp extends Application {
         var label = new Label("Color");
         var choiceBox = new ChoiceBox<String>();
         choiceBox.getItems().addAll("Rojo", "Azul", "Verde");
-        choiceBox.setOnAction(e -> {
+        choiceBox.setOnAction(_ -> {
             int indice = choiceBox.getSelectionModel().getSelectedIndex();
             if (indice == 0) {
                 label.setTextFill(Color.RED);

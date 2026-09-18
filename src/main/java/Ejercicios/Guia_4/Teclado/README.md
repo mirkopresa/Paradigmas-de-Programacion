@@ -1,0 +1,3 @@
+# 5. Teclado
+
+Escribir una aplicación que, cuando el usuario presione cualquier tecla del teclado, muestre un alerta informando cuál fue la tecla presionada.
