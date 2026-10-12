@@ -1,0 +1,1 @@
+duplicada(X) :- append(A, A, X).
