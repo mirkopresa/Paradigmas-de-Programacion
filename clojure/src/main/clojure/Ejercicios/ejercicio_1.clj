@@ -3,5 +3,3 @@
 
 (defn segundos [d h m s]
   (+ (* d 86400) (* h 3600) (* m 60) s))
-
-(segundos 1 4 40 4)
